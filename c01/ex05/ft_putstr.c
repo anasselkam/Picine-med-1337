@@ -1,19 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ael-kham <ael-kham@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/26 17:42:59 by ael-kham          #+#    #+#             */
+/*   Updated: 2025/07/26 17:57:47 by ael-kham         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
-void ft_putstr(char *str) 
+
+void	ft_putstr(char *str)
 {
- int i;
- i = 0;
-	while ( str[i] != '\0') 
-{
-	write ( 1, &str[i], 1);
-	i++;
-}
-}
-int main () 
-{
-  char *my_string;
-  my_string ="Hello, world!";
- ft_putstr(my_string);
-  ft_putstr("\nThis is a test.");
-return (0) ;
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
 }

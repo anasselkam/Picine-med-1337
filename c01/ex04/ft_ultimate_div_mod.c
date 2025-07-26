@@ -1,10 +1,23 @@
-void ft_ultimate_div_mod(int *a, int *b)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ael-kham <ael-kham@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/26 17:42:50 by ael-kham          #+#    #+#             */
+/*   Updated: 2025/07/26 17:56:48 by ael-kham         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	int temp_p;
-if ( *b != 0)
-{
-	temp_p = *a;
-	*a = temp_p / *b;
-	*b = temp_p % *b;
-}
+	int	temp_p;
+
+	if (*b != 0)
+	{
+		temp_p = *a;
+		*a = temp_p / *b;
+		*b = temp_p % *b;
+	}
 }

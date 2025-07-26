@@ -1,27 +1,35 @@
-int ft_strlen(char *str)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ael-kham <ael-kham@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/26 17:43:07 by ael-kham          #+#    #+#             */
+/*   Updated: 2025/07/26 17:59:01 by ael-kham         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <unistd.h>
+
+int	ft_strlen(char *str)
 {
-	int i;
+	int	i;
+
 	i = 0;
-	while (str [i] !='\0') {
+	while (str[i] != '\0')
+	{
 		i++;
+	}
+	return (i);
 }
-       return (i);
 
-}
-int main () 
+void	ft_putnbr(int nb)
 {
-    char *text1;
-    char *text2;
-    int	len1;
-    int len2;
-     
-	text1 ="Hello";
-	text2 ="This is a test.";
-	
-	len1 = ft_strlen(text1);
-	len2 = ft_strlen(text2);
+	char	c;
 
-		ft_putnbr(len1);	
-	 	ft_putnbr(len2);
-return (0);
+	if (nb >= 10)
+		ft_putnbr(nb / 10);
+	c = nb % 10 + '0';
+	write(1, &c, 1);
 }
